@@ -1,8 +1,6 @@
 import streamlit as st
 
-import pandas as pd
-
-import sklearn as sk
+import pandas as pds
 
 st.title("🎈 My new app")
 st.write(
