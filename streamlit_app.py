@@ -1,11 +1,13 @@
 import streamlit as st
+import plotly.express as px
 
-import pandas as pds
+# Sample data for the pie chart
+labels = ['Python', 'Java', 'C++', 'JavaScript']
+values = [450, 300, 200, 150]
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+# Create a pie chart using Plotly
+fig = px.pie(names=labels, values=values, title='Programming Language Popularity')
 
-
-st.write("Welcome Sakthi 1234s")
+# Display the pie chart in Streamlit
+st.title("Pie Chart Example in Streamlit")
+st.plotly_chart(fig)
