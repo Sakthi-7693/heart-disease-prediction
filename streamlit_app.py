@@ -1,13 +1,32 @@
 import streamlit as st
 import plotly.express as px
 
-# Sample data for the pie chart
-labels = ['Python', 'Java', 'C++', 'JavaScript']
-values = [450, 300, 200, 150]
+DATASET_PATH = "data/heart_2020_cleaned.csv"
+LOG_MODEL_PATH = "model/logistic_regression.pkl"
 
-# Create a pie chart using Plotly
-fig = px.pie(names=labels, values=values, title='Programming Language Popularity')
+# Set page configuration
+st.set_page_config(page_title="Custom Navbar App", page_icon="🌐")
 
-# Display the pie chart in Streamlit
-st.title("Pie Chart Example in Streamlit")
-st.plotly_chart(fig)
+# Custom CSS for the navbar
+st.markdown(
+    """
+    <style>
+    /* Navbar styling */
+    .navbar {
+        background-color: #00008B; /* Dark Blue */
+        padding: 10px;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Display navbar
+st.markdown('<div class="navbar">My Custom Heading</div>', unsafe_allow_html=True)
+
+# Main content
+st.write("Welcome to the main content of your Streamlit app!")
